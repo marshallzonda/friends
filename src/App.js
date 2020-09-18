@@ -7,7 +7,8 @@ import Profile from './components/Profile/Profile';
 import { Route, BrowserRouter } from 'react-router-dom';
 import News from './components/News/News';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
-import Users from './Users/Users';
+import UsersContainer from './Users/UsersContainer';
+
 
 const App = (props) => {
     
@@ -25,7 +26,7 @@ const App = (props) => {
         <Route path="/news" 
           render={()=><News />} />
            <Route path="/users" 
-          render={()=><Users />} />
+          render={()=><UsersContainer />} />
       </div>
     </div>
     </BrowserRouter>
