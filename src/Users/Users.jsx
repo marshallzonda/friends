@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './Users.module.css';
-import * as axios from 'axios';
 import userPhoto from '../../src/assets/images/avatar.jpg'
 
 
@@ -11,7 +10,6 @@ let Users = (props) =>{
     for(let i=1; i <= pagesCount; i++){
         pages.push(i)
     }
-
     return (
         <div>
             <div>
@@ -28,8 +26,8 @@ let Users = (props) =>{
                         <div><img src={u.photos.small != null ? u.photos.small : userPhoto} alt="" className={style.usersPhoto} /></div>
                         <div>
                             {u.followed
-                                ? <button onClick={() => { this.props.unfollow(u.id) }}>Unfollow</button>
-                                : <button onClick={() => { this.props.follow(u.id) }}>Follow</button>}
+                                ? <button onClick={() => { props.unfollow(u.id) }}>Unfollow</button>
+                                : <button onClick={() => { props.follow(u.id) }}>Follow</button>}
 
                         </div>
                     </span>
