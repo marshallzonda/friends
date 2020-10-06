@@ -7,7 +7,6 @@ let initialState = {
     id: null,
     email: null,
     login: null,
-    isFetching: true,
     isAuth:false
 }
 
@@ -25,9 +24,8 @@ const authReducer = (state = initialState, action)=>{
 export const setAuthUserData = (id, email, login, isAuth) => ({ type: SET_USER_DATA, payload:{
     id,email,login,isAuth
 }})
-export const getAuthUserData = () =>{
-    return (dispatch)=>{
-        authAPI.me()
+export const getAuthUserData = () =>(dispatch)=>{
+        return authAPI.me()
         .then(response =>{
             if(response.data.resultCode === 0){
                 let {id,login,email} = response.data.data;
@@ -35,7 +33,7 @@ export const getAuthUserData = () =>{
             }
         })
     }
-}
+
 export const login = (email,password,rememberMe) =>{
     return (dispatch)=>{
         authAPI.login(email,password,rememberMe)
