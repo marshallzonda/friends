@@ -6,7 +6,7 @@ import Users from './Users';
 import Preloader from '../components/Common/Preloader/Preloader';
 import { compose } from 'redux';
 import { withAuthRedirect } from '../hoc/withAuthRedirect';
-import { getFollowingInProgress,getIsFetching,getPageSize,getUsers,getTotalUsersCount,getCurrentPage} from '../redux/users-selectors';
+import { getFollowingInProgress,getIsFetching,getPageSize,getUsers,getTotalUsersCount,getCurrentPage,} from '../redux/users-selectors';
 
 
 class  UsersContainer extends React.Component{
@@ -46,6 +46,7 @@ class  UsersContainer extends React.Component{
 
         }
 } */
+
 let mapStateToProps = (state) =>{
     return{
             users: getUsers(state),
