@@ -2,7 +2,6 @@ import React from 'react';
 import s from './ProfileInfo.module.css'
 import { useState,useEffect } from 'react';
 
-let arr =[0,()=>{}];
 
 const ProfileStatusWithHooks =(props) => {
     let [editMode,setEditMode] = useState(false);

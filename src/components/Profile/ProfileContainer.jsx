@@ -9,9 +9,10 @@ class ProfileContainer extends React.Component{
   
   componentDidMount(){
     let userId = this.props.match.params.userId;
+    debugger;
     if (!userId){
       userId = this.props.autorizedUserId;
-      if(userId){
+      if(!userId){
         this.props.history.push('/login')
       }
     }
@@ -22,7 +23,10 @@ class ProfileContainer extends React.Component{
   render(){
     
     return (
-      <Profile {...this.props} profile ={this.props.profile} status={this.props.status} updateStatus={this.props.updateStatus}/>
+      <Profile {...this.props}
+                profile ={this.props.profile} 
+                status={this.props.status} 
+                updateStatus={this.props.updateStatus}/>
   
     )
   } 
