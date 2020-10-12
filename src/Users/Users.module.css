@@ -1,4 +1,39 @@
 .usersPhoto{
     width: 100px;
     height: 100px;
+    border-radius: 50%;
+    border: 2px solid black;
+    
+}
+
+.btnFollow{
+   width: 100px;
+   background-color: #fdb2b2;
+   border-radius: 10px;
+   padding: 5px;
+   cursor: pointer;
+}
+.btnUnfollow{
+    width: 100px;
+    background-color: #4be078;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+ }
+.userPhotoContainer{
+    margin: 10px;
+}
+
+.allUsersContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 10px;
+}
+.userContainer{
+    flex:0 1 20%; 
+}
+.userItem{
+    display: flex;
+    justify-content: center;
 }

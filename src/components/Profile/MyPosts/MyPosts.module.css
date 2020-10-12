@@ -1,3 +1,18 @@
 .postsBlock{
     padding: 10px;
 }
+.messageTextarea{
+    width: 350px;
+    height: 100px;
+    resize: none;
+
+}
+.btn{
+    width: 100px;
+    padding: 7px;
+    margin: 10px 0px;
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 10px;
+    border: 1px solid grey;
+}

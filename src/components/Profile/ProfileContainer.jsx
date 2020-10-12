@@ -9,7 +9,6 @@ class ProfileContainer extends React.Component{
   
   componentDidMount(){
     let userId = this.props.match.params.userId;
-    debugger;
     if (!userId){
       userId = this.props.autorizedUserId;
       if(!userId){
@@ -26,7 +25,8 @@ class ProfileContainer extends React.Component{
       <Profile {...this.props}
                 profile ={this.props.profile} 
                 status={this.props.status} 
-                updateStatus={this.props.updateStatus}/>
+                updateStatus={this.props.updateStatus}
+               />
   
     )
   } 

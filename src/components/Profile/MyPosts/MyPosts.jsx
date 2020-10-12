@@ -30,11 +30,11 @@ const AddNewPostForm = (props)=>{
     return(
         <form onSubmit={props.handleSubmit}>
                 <div>
-                    <Field component={Textarea} name={'newPostText'} placeholder='Post message'
+                    <Field className={s.messageTextarea} component={Textarea} name={'newPostText'} placeholder='Post message'
                       validate={[required,maxLength10]}/>
                     </div>
                 <div>
-                    <button>Add post</button>
+                    <button className={s.btn}>Add post</button>
                 </div>
             </form>
     )

@@ -11,7 +11,7 @@ const Navbar = () => {
             <div className={classes.nav__item}>
                 <NavLink to="/dialogs" activeClassName={classes.activeLink}>Messages</NavLink>
             </div>
-            <div className={classes.nav__item}>
+            {/* <div className={classes.nav__item}>
             <NavLink to="/news" activeClassName={classes.activeLink}>News</NavLink>
             </div>
             <div className={classes.nav__item}>
@@ -19,7 +19,7 @@ const Navbar = () => {
             </div>
             <div className={classes.nav__item}> 
                 <a href="">Settings</a>
-            </div>
+            </div> */}
             <div className={classes.nav__item}>
             <NavLink to="/users" activeClassName={classes.activeLink}>Users</NavLink>
             </div>

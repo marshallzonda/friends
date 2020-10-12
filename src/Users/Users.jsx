@@ -8,15 +8,9 @@ let Users = ({currentPage,onPageChanged,pageSize,totalUsersCount,users,...props}
     
     return (
         <div>
-            <Paginator 
-            currentPage={currentPage}
-            onPageChanged={onPageChanged}
-            totalItemsCount={totalUsersCount}
-            pageSize={pageSize}
-             />
-            <div>
-            {
-                users.map(u => <User 
+            <div className={style.allUsersContainer}> 
+                {
+                users.map(u => <User
                     user={u} 
                     key={u.id}
                     followingInProgress={props.followingInProgress}
@@ -25,7 +19,12 @@ let Users = ({currentPage,onPageChanged,pageSize,totalUsersCount,users,...props}
                 )
             }
             </div>
-            
+            <Paginator 
+            currentPage={currentPage}
+            onPageChanged={onPageChanged}
+            totalItemsCount={totalUsersCount}
+            pageSize={pageSize}
+             />
         </div>
     )
 }
